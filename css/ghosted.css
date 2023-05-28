@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+}
+
+section{
+    padding: 4rem 0 1.5rem;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.3%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+header.shadow{
+    background: #131313;
+    box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+header .shadow .navbar a{
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+}
+.navbar li{
+    display: inline-block;
+    width: 80px;
+    position: relative;
+    list-style-type: none;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+.navbar li a{
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-left: -50px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+.navbar li a:hover{
+    background-color: rgba(255, 0, 0, 0.08);
+}
+.navbar li a.home-btn{
+    background-color: #FF0000;
+}
+#menu-icon{
+    width: 30px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1000001;
+    display: none;
+}
+header h1,
+.footer h1{
+    color: #fff;
+    font-weight: 900;
+    padding-left: 20px;
+}
+.btn_signin{
+    text-decoration: none;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    padding: 6px 16px;
+    margin-left: 50%;
+    margin-right: 20px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    border-radius: 0.4rem;
+}
+.btn_signin:hover {
+    background: rgb(178, 0, 0);
+}
+header span,
+.footer span{
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background: white !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 1.5rem !important;
+    background: rgb(255, 0, 0) !important;
+}
+
+
+.footer{
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+}
+.social{
+    margin-left: 78%;
+    margin-top: 10px;
+}
+.social i{
+    padding-left: 10px;
+    color: #fff;
+}
+
+.main{
+    position: relative;
+    background-position: center top;
+    background-size: cover;
+    background-image: url(https://image.tmdb.org/t/p/original/cXQmssIyFDWAD84wDy7p2G3QIaQ.jpg);
+    width: 1510px;
+    height: 550px;
+    display: flex;
+}
+.main::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    pointer-events: none;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.container {
+    color: white;
+}
+.poster {
+    width: 480px;
+    height: 100vh;
+}
+
+.poster img {
+    padding-top: 45%;
+    padding-left: 22%;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+
+.info{
+    margin-top: 14%;
+    margin-left: 10%;
+}
+.info2{
+    margin-left: 40%;
+    margin-top: -20px;
+}
+.play{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+.movie-title {
+    font-size: 55px;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+    font-weight: 700;
+    text-align: left;
+    color: white;
+    text-shadow: 1px 1px #fff;
+    box-shadow: 0px 0px #fff;
+}
+.vote{
+    color: #00ff00;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 25px;
+}
+.movie-detail {
+    display: flex;
+}
+.gen{
+    display: flex;
+    margin-left: 20px;
+}
+.w{
+    width: 120px;
+}
+.gerne{
+    background-color: #FF0000;
+    border-radius: 20px;
+    text-align: center;
+    height: 30px;
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-top: 6.5px;
+    font-size: 14px;
+    box-shadow: 0px 0px #fff;
+}
+
+.movie-description {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    text-align: justify;
+    overflow: hidden;
+    box-shadow: 0px 0px #fff;
+}
+.play{
+    margin-top: 30px;
+    background-color: #FF0000;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.play a{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-left: 20px;
+}
+.underline{
+    border: 3.5px solid #FF0000;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: -22px;
+}
+.overlay2 {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(27, 27, 27, .5);
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+label {
+    color: #fff;
+}
+
+.movie-cast .header {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.list {
+    display: grid;
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+
+.list .cast {
+    width: 100%;
+    height: 200px;
+}
+
+.list .cast img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: rgb(255, 255, 255);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+.heading{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+.underline2{
+    margin-left: 100px;
+    border: 3.5px solid #FF0000;
+    width: 98px;
+    margin-top: 2px;
+}
+.embed{
+    display: grid;
+    max-width: 1340px;
+    margin-top: 1.5rem;
+}
+.embed .vid{
+    width: 100%;
+    height: 100%;
+}
+.embed .vid iframe{
+    width: 100%;
+}
+.back{
+    display: grid;
+    max-width: 1340px;
+    margin-top: 1.5rem;
+}
+.back .back-img{
+    width: 100%;
+    height: 30%;
+}
+.back .back-img img{
+    width: 100%;
+}
+.post{
+    display: grid;
+    min-width: 1424px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -145px;
+}
+
+.post .container-img {
+    width: 145%;
+    height: 650px;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+
+.post .container-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post .container2 {
+    width: 100px;
+}
+.review{
+    margin-top: -300px;
+    color: white;
+}
+.cmt{
+    display: flex;
+    margin-left: 110px;
+    margin-top: 40px;
+    width: 88%;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.icon{
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    padding-top: 10px;
+    background-color: #5FBD56;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.info-cmt{
+    margin-left: 20px;
+}
+.username{
+    font-size: 20px;
+    font-weight: 700;
+}
+.time-post{
+    margin-top: 10px;
+    font-size: 13px;
+}
+.mess{
+    margin-top: 15px;
+    font-size: 16px;
+}
+.cmt:hover{
+    background-color: rgb(19, 19, 19);
+    border-radius: 5px;
+
+}
+.suggest{
+    display: grid;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.suggest .container-img {
+    width: 100%;
+    height: 450px;
+}
+
+.suggest .container-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.suggest .container {
+    width: 100px;
+}
+.overlay {
+    position: absolute;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.text {
+    padding-top: 340px;
+    padding-left: 20px;
+}
+
+.overlay span,
+.overlay h5 {
+    color: #fff;
+    padding-top: 20px;
+}
+.overlay h5{
+    font-size: 18px;
+}
+
+.overlay i {
+    background-color: #FF0000;
+    color: #fff;
+    position: absolute;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 200px;
+}
+
+.container:hover .overlay {
+    height: 100%;
+}

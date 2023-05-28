@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/search.css">
+    <title>Search</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Search</title>
+</head>
+
+<body>
+
+    <header>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <h1 class="name"><a href="#">Moon<span>Flix</span></a> </h1>
+        <div class="nav">
+            <ul class="navbar">
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./movies.html">MOVIES</a></li>
+                <li><a href="./tv_series.html">TV SERIES</a></li>
+                <li><a href="./search.html" class="home-btn">SEARCH</a></li>
+            </ul>
+        </div>
+
+        <a href="./signin.html" class="btn_signin">SIGN IN</a>
+    </header>
+
+    <form id="form">
+        <input type="text" placeholder="Search MoonFlix" id="search">
+
+    </form>
+
+    <main id="main">
+
+    </main>
+
+
+    <!--Footer-->
+    <div class="footer">
+        <h1 class="name">Moon<span>Flix</span></h1>
+        <div class="social">
+            <a href=""><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href=""><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok fa-xl"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+
+        let header = document.querySelector('header');
+
+        window, addEventListener('scroll', () => {
+            header.classList.toggle('shadow', window.scrollY > 0);
+        });
+
+
+
+        const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+
+        const IMGPATH = "https://image.tmdb.org/t/p/w1280";
+
+        const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+
+
+        const main = document.getElementById("main");
+        const form = document.getElementById("form");
+        const search = document.getElementById("search");
+
+        getMovies(APIURL);
+
+        async function getMovies(url) {
+            const resp = await fetch(url);
+            const respData = await resp.json();
+
+            console.log(respData);
+            showMovies(respData.results);
+
+        }
+
+        function showMovies(movies) {
+            main.innerHTML = "";
+            movies.forEach((movie) => {
+                const { poster_path, title, vote_average, overview } = movie;
+                const movieEl = document.createElement("div");
+                movieEl.classList.add("movie");
+
+
+                movieEl.innerHTML = `
+                    <img src="${IMGPATH + poster_path}" alt="${title}"/>
+
+                    <div class="movie-info">
+                        <h3>${title}</h3>
+                        <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+                    </div> 
+
+                    <div class="overview">
+
+                    <h2>Overview:</h2>
+                    ${overview}
+                    </div>
+                    `;
+
+                main.appendChild(movieEl)
+            });
+
+        }
+
+
+        function getClassByRate(vote) {
+            if (vote >= 8) {
+                return 'green';
+            } else if (vote >= 5) {
+                return 'orange'
+            } else {
+                return 'red';
+            }
+
+        }
+
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+
+            const searchTerm = search.value;
+
+            if (searchTerm) {
+
+                getMovies(SEARCHAPI + searchTerm);
+
+                search.value = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

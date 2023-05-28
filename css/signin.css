@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: url(../image/VN-en-20230410-popsignuptwoweeks-perspective_alpha_website_large.jpg)no-repeat;
+    min-height:100vh;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,20%);
+    background: transparent;
+    padding: 0 10px 0;
+    text-align: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+}
+.form-box span{
+    color: red;
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input-field{
+    background: #131313;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.btn-field{
+    width: 100%;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background: #FF0000;
+    font-weight: bolder;
+    color: #fff;
+    height: 50px;
+    width: 430px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+.input-group{
+    height: -80px;
+}
+.btn-field button.disable{
+    background: #131313;
+    color: #FF0000;
+}
