@@ -115,7 +115,7 @@ header h1,
 
 .btn_signin {
     text-decoration: none;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-weight: 800;
     font-size: 15px;
     line-height: 1.75;
@@ -179,7 +179,7 @@ header span,
 
 .genre {
     max-width: 100%;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
     display: inline-flex;
     align-items: center;
@@ -210,7 +210,7 @@ header span,
 .home-text h4 {
     margin-top: 150px;
     margin-left: 150px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 4rem;
     line-height: 1.235;
     letter-spacing: 0.00735em;
@@ -389,81 +389,52 @@ header span,
 }
 
 /*Laptop 1024*/
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
+    header>.btn_signin {
+        margin-left: 10%;
+    }
+
     .navbar {
-        margin-left: 40px;
+        margin-left: -150px;
     }
-    .name{
-        margin-left: 10px;
+
+    .home-text h4 {
+        font-size: 44px;
     }
-    .btn_signin {
-        margin-left: 30%;
+
+    .home-text h4,
+    .home-text .move,
+    .home-text p,
+    .home-text a {
+        margin-left: 100px;
+    }
+
+    .movies-slide {
+        max-height: 600px;
     }
 
     .heading {
-        margin-left: 15px;
-        font-size: 1.5rem;
+        font-size: 25px;
+        margin-left: 20px;
     }
 
     .underline {
-        margin-left: 15px;
-        width: 100px;
+        margin-left: 20px;
+        width: 110px;
     }
 
     .movies-container,
     .series-container,
     .topratedmovies-container,
     .topratedseries-container {
-        max-width: 995px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, auto));
     }
 
     .movies-container .container-img,
     .series-container .container-img,
     .topratedmovies-container .container-img,
     .topratedseries-container .container-img {
-        width: 111%;
-        height: 380px;
-    }
-
-    .movies-container .container-img img,
-    .series-container .container-img img,
-    .topratedmovies-container .container-img img,
-    .topratedseries-container .container-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .overlay {
-        width: 111%;
-    }
-
-    .overlay span,
-    .overlay h5 {
-        padding-top: 0px;
-    }
-
-    .home-text h4 {
-        font-size: 2rem;
-        margin-top: 120px;
-        margin-left: 100px;
-    }
-
-    .home-text p {
-        font-weight: 400;
-        font-size: 1rem;
-        margin-left: 100px;
-        width: 30%;
-    }
-
-    .move {
-        margin-left: 100px;
-    }
-
-    .home-text a {
-        margin-left: 100px;
-        margin-bottom: 100px;
-        margin-top: 40px;
+        height: 420px;
     }
 
     .social {
@@ -472,27 +443,41 @@ header span,
 }
 
 /*Tablet 768*/
-@media (max-width: 768px) {
-    .box {
-        min-height: 100px;
+@media only screen and (max-width: 768px) {
+    header h1 {
+        margin-left: -20%;
+    }
+
+    .home-text h4 {
+        font-size: 40px;
+    }
+
+    .home-text h4,
+    .home-text .move,
+    .home-text p,
+    .home-text a {
+        margin-left: 50px;
+    }
+
+    .nav {
+        margin-right: 80px;
     }
 
     #menu-icon {
         display: initial;
-        margin-left: 10px;
-        transition: 0.2s;
-    }
-
-    .name{
-        margin-left: -120px;
+        margin-left: 2%;
     }
 
     .navbar i {
-        display: block;
+        display: initial;
+    }
+
+    .navbar h1 {
+        display: initial;
     }
 
     .navbar {
-        width: 220px;
+        width: 250px;
         height: 100%;
         position: fixed;
         top: 0;
@@ -507,52 +492,32 @@ header span,
         transition: 0.3s;
     }
 
-    .navbar h1 {
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-
     .navname {
-        margin-left: -10px;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .navbar li {
         width: 140px;
         margin-top: 20px;
+        margin-left: 40px;
     }
 
     .navbar a {
         display: flex;
     }
 
-    .navbar li a:hover {
-        background-color: rgba(255, 0, 0, 0.08);
-    }
-
     .navbar.active {
         opacity: 1;
-        left: -40px;
+        left: 15%;
         pointer-events: fill;
     }
 
-    .home-text h4 {
-        margin-top: 120px;
-        margin-left: 30px;
-    }
-
-    .home-text p {
-        margin-left: 30px;
-        width: 90%;
-    }
-
-    .move {
-        margin-left: 30px;
-    }
-
-    .home-text a {
-        margin-left: 30px;
+    .movies-container,
+    .series-container,
+    .topratedmovies-container,
+    .topratedseries-container {
+        grid-template-columns: repeat(auto-fit, minmax(600px, auto));
     }
 
     .footer {
@@ -563,79 +528,93 @@ header span,
         text-align: center;
     }
 
-    .social i {
-        margin-left: -90px;
+    .social {
+        margin-left: 35%;
         margin-top: 20px;
     }
 
-    .movies-container,
-    .series-container,
-    .topratedmovies-container,
-    .topratedseries-container {
-        max-width: 730px;
-    }
-
-    .movies-container .container-img,
-    .series-container .container-img,
-    .topratedmovies-container .container-img,
-    .topratedseries-container .container-img {
-        width: 112%;
-        height: 380px;
-    }
-
-    .overlay {
-        width: 112%;
+    .social i {
+        margin-left: 20px;
     }
 
 }
 
 /*Mobile 425*/
-@media (min-width: 425px) {
-    .name{
-        margin-left: -10px;
-    }
-    
-    .box {
-        max-height: 580px;
+@media only screen and (max-width: 425px) {
+    header h1 {
+        margin-left: -5px;
+        font-size: 28px;
     }
 
-    .heading{
+    header span {
+        font-size: 28px;
+    }
+
+    #menu-icon {
+        margin-left: 5%;
+    }
+
+    .home-text p {
+        width: 90%;
+    }
+
+    .home-text h4 {
+        margin-top: 100px;
+    }
+
+    .home-text h4,
+    .home-text .move,
+    .home-text p,
+    .home-text a {
         margin-left: 30px;
     }
-    .underline{
-        margin-left: 30px;
-    }
+
     .movies-container,
     .series-container,
     .topratedmovies-container,
     .topratedseries-container {
         max-width: 400px;
+        grid-template-columns: repeat(auto-fit, minmax(360px, auto));
     }
 
-    .movies-container .container-img,
-    .series-container .container-img,
-    .topratedmovies-container .container-img,
-    .topratedseries-container .container-img {
-        width: 111%;
-        height: 350px;
-    }
-    .footer {
-        display: block;
-    }
-
-    .footer h1 {
-        text-align: center;
-    }
-
-    .social i {
-        margin-left: -70px;
+    .social {
+        margin-left: 23%;
         margin-top: 20px;
-        padding-left: 10px;
+    }
+
+    .navname {
+        margin-right: 40px;
+    }
+
+    .navbar.active {
+        opacity: 1;
+        left: 28%;
+        pointer-events: fill;
     }
 }
-/*Mobile 425*/
-@media (min-width: 375px) {
-    .name{
-        margin-left: 0px;
+
+/*Iphone 12 Pro*/
+@media only screen and (max-width: 391px) {
+    header>.btn_signin {
+        margin-left: 5%;
+    }
+    .home-text h4{
+        font-size: 32px;
+    }
+    .home-text p{
+        font-size: 14px;
+    }
+    .home-text a{
+        font-size: 14px;
+    }
+    .movies-slide{
+        max-height: 500px;
+    }
+    .box{
+        height: fit-content;
+    }
+    .social{
+        margin-left: 20%;
+        margin-top: 20px;
     }
 }

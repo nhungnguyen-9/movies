@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,13 +10,16 @@
     scroll-padding-top: 2rem;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #000;
 }
-section{
+
+section {
     padding: 4rem 0 1.5rem;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,21 +33,39 @@ header{
     padding-bottom: 10px;
     transition: 0.5s;
 }
-.name a{
-    color: white;
-}
-header.shadow{
+
+header.shadow {
     background: #131313;
     box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
-header .shadow .navbar a{
+
+header .shadow .navbar a {
     color: #fff;
 }
-.navbar{
+
+.nav {
+    display: flex;
+}
+
+.navbar h1 {
+    display: none;
+}
+
+.navbar {
     display: flex;
     list-style-type: none;
 }
-.navbar li{
+
+.name a {
+    color: white;
+}
+
+.navbar i {
+    margin-right: 10px;
+    display: none;
+}
+
+.navbar li {
     display: inline-block;
     width: 80px;
     position: relative;
@@ -52,38 +73,50 @@ header .shadow .navbar a{
     margin-top: 5px;
     margin-left: 8px;
 }
-.navbar li a{
+
+.navbar li a {
     background: transparent;
     border-radius: 5px;
     padding: 10px 10px;
     margin-left: -50px;
 }
+
 .navbar a {
     text-decoration: none;
     color: #fff;
     font-size: 14px;
     font-weight: 800;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
     background-color: rgba(255, 0, 0, 0.08);
 }
-.navbar li a.home-btn{
+
+.navbar li a.home-btn {
     background-color: #FF0000;
 }
-#menu-icon{
+
+#menu-icon {
     width: 30px;
     cursor: pointer;
     color: #fff;
     z-index: 1000001;
     display: none;
 }
+
 header h1,
-.footer h1{
+.footer h1 {
     color: #fff;
     font-weight: 900;
     padding-left: 20px;
 }
-.btn_signin{
+
+.navbar i {
+    margin-right: 10px;
+    display: none;
+}
+
+.btn_signin {
     text-decoration: none;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 800;
@@ -98,38 +131,45 @@ header h1,
     background-color: rgb(255, 0, 0);
     border-radius: 0.4rem;
 }
+
 .btn_signin:hover {
     background: rgb(178, 0, 0);
 }
+.navname{
+    display: none;
+}
 header span,
-.footer span{
+.footer span {
     color: rgb(255, 0, 0);
     font-weight: 900;
     font-size: 30px;
 }
 
-.footer{
+.footer {
     background-color: rgb(19, 19, 19);
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 600px;
 }
-.social{
+
+.social {
     margin-left: 78%;
     margin-top: 10px;
 }
-.social i{
+
+.social i {
     padding-left: 10px;
     color: #fff;
 }
 
-.title{
+.title {
     padding-top: 100px;
     display: flex;
     justify-content: center;
 }
-.title-bar{
+
+.title-bar {
     background-color: #FF0000;
     border-radius: 3px;
     color: #fff;
@@ -138,11 +178,13 @@ header span,
     margin: 10px;
     font-weight: bolder;
 }
-.title-bar a{
+
+.title-bar a {
     text-decoration: none;
     color: #fff;
 }
-.title-bar:hover{
+
+.title-bar:hover {
     background-color: transparent;
     text-decoration: none;
     letter-spacing: 0.02857em;
@@ -151,7 +193,7 @@ header span,
     color: rgb(255, 0, 0);
 }
 
-input{
+input {
     color: #7C7C7C;
     font-size: 16px;
     background-color: #000;
@@ -163,20 +205,24 @@ input{
     padding-left: 15px;
     margin-top: 100px;
 }
-input:hover{
+
+input:hover {
     border: 1px solid #fff;
 }
-input:focus{
+
+input:focus {
     outline: none;
     border: 1px solid lightgreen;
 }
-main{
+
+main {
     display: flex;
     flex-wrap: wrap;
     padding-left: 85px;
 }
-.movie{
-    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+
+.movie {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     width: 300px;
     background-color: rgb(2, 3, 7, 0.4);
@@ -185,32 +231,35 @@ main{
     position: relative;
 }
 
-.movie img{
+.movie img {
     width: 100%;
 }
 
-.movie-info h3{
+.movie-info h3 {
     margin-left: 10px;
 }
 
-.movie-info span{
+.movie-info span {
     background-color: rgb(2, 3, 7, 0.4);
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
     font-weight: bold;
 }
 
-.movie-info span.green{
+.movie-info span.green {
     color: yellow;
 }
-.movie-info span.orange{
- color: orange;
+
+.movie-info span.orange {
+    color: orange;
 }
-.movie-info span.red{
+
+.movie-info span.red {
     color: rgb(2, 3, 7, 0.4);
 
 }
-.overview{
+
+.overview {
     position: absolute;
     top: 0;
     right: 0;
@@ -226,10 +275,248 @@ main{
     padding-top: 50px;
 }
 
-.movie:hover .overview{
+.movie:hover .overview {
     transform: translateY(0);
 }
 
-.overview h4{
+.overview h4 {
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width:1024px) {
+    input {
+        width: 85%;
+    }
+
+    .navbar {
+        margin-left: -40px;
+    }
+
+    header>.btn_signin {
+        margin-left: 20%;
+        margin-right: 2%;
+    }
+
+    input {
+        width: 920px;
+        margin-left: 50px;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+
+    main {
+        min-width: 890px;
+        margin-left: -50px;
+    }
+
+    .movie {
+        width: 20.8%;
+    }
+
+    .social {
+        margin-left: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header h1{
+        margin-left: -20%;
+        font-size: 36px;
+    }
+    header span{
+        font-size: 36px;
+    }
+    header>.btn_signin{
+        margin-left: -5%;
+        margin-right: 35%;
+    }
+    .nav {
+        margin-right: 80px;
+    }
+
+    #menu-icon {
+        display: initial;
+        margin-left: 2%;
+    }
+
+    .navbar i {
+        display: initial;
+    }
+
+    .navbar h1 {
+        display: initial;
+    }
+
+    .navbar {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -40px;
+        background: #363636;
+        flex-direction: column;
+        padding-top: 70px;
+        padding-left: 55px;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    .navname {
+        display: initial;
+        margin-left: 25px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar li {
+        width: 140px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .navbar a {
+        display: flex;
+    }
+
+    .navbar.active {
+        opacity: 1;
+        left: 5px;
+        pointer-events: fill;
+    }
+
+    input {
+        width: 700px;
+        margin-left: 50px;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+
+    main {
+        min-width: 1190px;
+        margin-left: -50px;
+    }
+
+    .movie {
+        width: 19%;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    .footer span{
+        font-size: 40px;
+    }
+
+    .social {
+        margin-left: 33%;
+        margin-top: 30px;
+    }
+
+    .social i {
+        margin-left: 25px;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    header{
+        width: 100%;
+    }
+    header h1{
+        margin-left: -25%;
+        font-size: 30px;
+    }
+    header span{
+        font-size: 30px;
+    }
+    header>.btn_signin{
+        margin-left: -45%;
+        margin-right: 67%;
+    }
+    .nav {
+        margin-right: 80px;
+    }
+
+    #menu-icon {
+        display: initial;
+        margin-left: 2%;
+    }
+
+    .navbar i {
+        display: initial;
+    }
+
+    .navbar h1 {
+        display: initial;
+    }
+
+    .navbar {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -40px;
+        background: #363636;
+        flex-direction: column;
+        padding-top: 70px;
+        padding-left: 55px;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    .navname {
+        display: initial;
+        margin-left: 40px;
+        margin-bottom: 10px;
+    }
+
+    .navbar li {
+        width: 140px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .navbar a {
+        display: flex;
+    }
+
+    .navbar.active {
+        opacity: 1;
+        left: 5px;
+        pointer-events: fill;
+    }
+
+    input {
+        width: 370px;
+        margin-left: 10px;
+        margin-top: 100px;
+        margin-right: 10px;
+    }
+
+    main {
+        min-width: 1200px;
+        margin-left: -87px;
+        margin-top: 20px;
+    }
+
+    .movie {
+        width: 15%;
+    }
+    .footer{
+        margin-top: 690px;
+    }
+    .footer h1{
+        margin-left: -130px;
+    }
+    .social{
+        margin-left: 12%;
+    }
 }

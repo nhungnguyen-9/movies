@@ -20,10 +20,15 @@
         <h1 class="name"><a href="#">Moon<span>Flix</span></a> </h1>
         <div class="nav">
             <ul class="navbar">
-                <li><a href="./home.html">HOME</a></li>
-                <li><a href="./movies.html">MOVIES</a></li>
-                <li><a href="./tv_series.html" class="home-btn">TV SERIES</a></li>
-                <li><a href="./search.html">SEARCH</a></li>
+                <div class="navname">
+                    <h1>Moon<span>Flix</span></h1>
+                </div>
+                <li><a href="./home.html"><i class="fa-solid fa-house" style="color: #fff;"></i>HOME</a></li>
+                <li><a href="./movies.html"><i class="fa-solid fa-film" style="color: #fff;"></i>MOVIES</a></li>
+                <li><a href="./tv_series.html" class="home-btn"><i class="fa-solid fa-tv" style="color: #fff;"></i>TV
+                        SERIES</a></li>
+                <li><a href="./search.html"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i>SEARCH</a>
+                </li>
             </ul>
         </div>
 
@@ -40,8 +45,8 @@
                     <h4>Black Knight</h4>
                     <div class="genre move w">Sci-Fi & Fantasy</span></div>
                     <div class="genre w">Action & Adventure</span></div>
-                    <p>In a dystopian 2071 devastated by air pollution, the survival of humanity depends on <br>
-                         the Black Knights — and they’re far from your average delivery men.</p>
+                    <p>In a dystopian 2071 devastated by air pollution, the survival of humanity depends on
+                        the Black Knights — and they’re far from your average delivery men.</p>
                     <a href="./black.html" class="play">
                         <i class="fa-solid fa-play"></i>
                         WATCH NOW
@@ -55,11 +60,11 @@
                     <h4>Never Give Up</h4>
                     <div class="genre move">Soap</span></div>
                     <div class="genre">Comedy</span></div>
-                    <p>Sol is a hardworking woman who has the chance to work as a backing vocalist for a <br>
-                         funk singer and return to dancing, as she did in her youth. Torn between family <br>
-                          pressure and passion for the stage, she must face the judgment of her church's members <br>
-                           and conflicts with her family. The new chance will make her reconnect with her past in many <br>
-                            ways, leading her to find her great youth love.</p>
+                    <p>Sol is a hardworking woman who has the chance to work as a backing vocalist for a
+                        funk singer and return to dancing, as she did in her youth. Torn between family
+                        pressure and passion for the stage, she must face the judgment of her church's members
+                        and conflicts with her family. The new chance will make her reconnect with her past in many
+                        ways, leading her to find her great youth love.</p>
                     <a href="./never.html" class="play">
                         <i class="fa-solid fa-play"></i>
                         WATCH NOW
@@ -74,11 +79,9 @@
                     <h4>Ulice</h4>
                     <div class="genre move">Drama</span></div>
                     <div class="genre">Comedy</span></div>
-                    <p>Ulice is a Czech soap opera produced and broadcast by Nova. In the Czech <br>
-                         language Ulice means street.
-
-                        The show describes the lives of the Farský, Jordán, <br>
-                         Boháč, Nikl, and Liška families and many other people that live in Prague. Their daily ...</p>
+                    <p>Ulice is a Czech soap opera produced and broadcast by Nova. In the Czech language Ulice means
+                        street. The show describes the lives of the Farský, Jordán, Boháč, Nikl, and Liška families and
+                        many other people that live in Prague. Their daily ...</p>
                     <a href="./ulice.html" class="play">
                         <i class="fa-solid fa-play"></i>
                         WATCH NOW
@@ -93,8 +96,8 @@
                     <h4>Sweet Tooth</h4>
                     <div class="genre move">Drama</span></div>
                     <div class="genre w">Sci-Fi & Fantasy</span></div>
-                    <p>On a perilous adventure across a post-apocalyptic world, a lovable boy who's half <br>
-                         -human and half-deer searches for a new beginning with a gruff protector.</p>
+                    <p>On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and
+                        half-deer searches for a new beginning with a gruff protector.</p>
                     <a href="./sweet.html" class="play">
                         <i class="fa-solid fa-play"></i>
                         WATCH NOW
@@ -108,8 +111,8 @@
                 <div class="home-text">
                     <h4>Woman in a Veil</h4>
                     <div class="genre move">Drama</span></div>
-                    <p>Jung Gyul Wool loses her vision and ability to walk because of her materialistic <br>
-                         husband and his mistress. Despite her shortcomings, she hatches a plot to seek revenge.
+                    <p>Jung Gyul Wool loses her vision and ability to walk because of her materialistic
+                        husband and his mistress. Despite her shortcomings, she hatches a plot to seek revenge.
                     </p>
                     <a href="./woman.html" class="play">
                         <i class="fa-solid fa-play"></i>
@@ -124,9 +127,9 @@
                 <div class="home-text">
                     <h4>Chashni</h4>
                     <div class="genre move">Drama</span></div>
-                    <p>An untoward incident mars the loving relationship between two sisters- Chandni and <br>
-                         Roshni. Years later, fate brings them face to face only to find out that they are daughter-in- <br>
-                          law and mother-in-law for each other. Thus, begins a typical saas-bahu saga.</p>
+                    <p>An untoward incident mars the loving relationship between two sisters- Chandni and
+                        Roshni. Years later, fate brings them face to face only to find out that they are daughter-in-
+                        law and mother-in-law for each other. Thus, begins a typical saas-bahu saga.</p>
                     <a href="./chashni.html" class="play pad">
                         <i class="fa-solid fa-play"></i>
                         WATCH NOW
@@ -429,6 +432,14 @@
             if (currentItem >= boxes.length) {
                 loadMoreBtn.style.display = 'none';
             }
+        }
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = function () {
+            menu.classList.toggle('fa-xmark');
+            navbar.classList.toggle('active');
         }
 
     </script>

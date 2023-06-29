@@ -22,10 +22,15 @@
         <h1 class="name"><a href="#">Moon<span>Flix</span></a> </h1>
         <div class="nav">
             <ul class="navbar">
-                <li><a href="./home.html">HOME</a></li>
-                <li><a href="./movies.html">MOVIES</a></li>
-                <li><a href="./tv_series.html">TV SERIES</a></li>
-                <li><a href="./search.html" class="home-btn">SEARCH</a></li>
+                <div class="navname">
+                    <h1>Moon<span>Flix</span></h1>
+                </div>
+                <li><a href="./home.html"><i class="fa-solid fa-house" style="color: #fff;"></i>HOME</a></li>
+                <li><a href="./movies.html"><i class="fa-solid fa-film" style="color: #fff;"></i>MOVIES</a></li>
+                <li><a href="./tv_series.html"><i class="fa-solid fa-tv" style="color: #fff;"></i>TV
+                        SERIES</a></li>
+                <li><a href="./search.html" class="home-btn"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i>SEARCH</a>
+                </li>
             </ul>
         </div>
 
@@ -57,6 +62,13 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="text/javascript">
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = function () {
+            menu.classList.toggle('fa-xmark');
+            navbar.classList.toggle('active');
+        }
 
         let header = document.querySelector('header');
 

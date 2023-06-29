@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,13 +10,16 @@
     scroll-padding-top: 2rem;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #000;
 }
-section{
+
+section {
     padding: 4rem 0 1.5rem;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,21 +33,39 @@ header{
     padding-bottom: 10px;
     transition: 0.5s;
 }
-.name a{
-    color: white;
-}
-header.shadow{
+
+header.shadow {
     background: #131313;
     box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
-header .shadow .navbar a{
+
+header .shadow .navbar a {
     color: #fff;
 }
-.navbar{
+
+.nav {
+    display: flex;
+}
+
+.navbar h1 {
+    display: none;
+}
+
+.navbar {
     display: flex;
     list-style-type: none;
 }
-.navbar li{
+
+.name a {
+    color: white;
+}
+
+.navbar i {
+    margin-right: 10px;
+    display: none;
+}
+
+.navbar li {
     display: inline-block;
     width: 80px;
     position: relative;
@@ -52,38 +73,45 @@ header .shadow .navbar a{
     margin-top: 5px;
     margin-left: 8px;
 }
-.navbar li a{
+
+.navbar li a {
     background: transparent;
     border-radius: 5px;
     padding: 10px 10px;
     margin-left: -50px;
 }
+
 .navbar a {
     text-decoration: none;
     color: #fff;
     font-size: 14px;
     font-weight: 800;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
     background-color: rgba(255, 0, 0, 0.08);
 }
-.navbar li a.home-btn{
+
+.navbar li a.home-btn {
     background-color: #FF0000;
 }
-#menu-icon{
+
+#menu-icon {
     width: 30px;
     cursor: pointer;
     color: #fff;
     z-index: 1000001;
     display: none;
 }
+
 header h1,
-.footer h1{
+.footer h1 {
     color: #fff;
     font-weight: 900;
     padding-left: 20px;
 }
-.btn_signin{
+
+.btn_signin {
     text-decoration: none;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 800;
@@ -98,18 +126,22 @@ header h1,
     background-color: rgb(255, 0, 0);
     border-radius: 0.4rem;
 }
+
 .btn_signin:hover {
     background: rgb(178, 0, 0);
 }
+
 header span,
-.footer span{
+.footer span {
     color: rgb(255, 0, 0);
     font-weight: 900;
     font-size: 30px;
 }
-.movies-slide{
+
+.movies-slide {
     padding: 4.5rem 0 1.5rem;
 }
+
 .box {
     width: 100%;
     min-height: 690px;
@@ -118,6 +150,7 @@ header span,
     align-items: center;
     background: rgb(2, 3, 7, 0.4);
 }
+
 .box img {
     position: absolute;
     width: 100%;
@@ -126,19 +159,23 @@ header span,
     object-position: center;
     z-index: -1;
 }
+
 .swiper-pagination-bullet {
     width: 6px !important;
     height: 6px !important;
     border-radius: 0.2rem !important;
     background: white !important;
     opacity: 1 !important;
+    display: none !important;
 }
 
 .swiper-pagination-bullet-active {
     width: 1.5rem !important;
     background: rgb(255, 0, 0) !important;
+    display: none !important;
 }
-.genre{
+
+.genre {
     max-width: 100%;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
@@ -159,13 +196,16 @@ header span,
     margin-top: 30px;
     margin-left: 10px;
 }
-.move{
+
+.move {
     margin-left: 150px;
 }
-.home-text{
+
+.home-text {
     color: #fff;
 }
-.home-text h4{
+
+.home-text h4 {
     margin-top: 150px;
     margin-left: 150px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -176,7 +216,8 @@ header span,
     text-align: left;
     overflow: hidden;
 }
-.home-text p{
+
+.home-text p {
     letter-spacing: 0.00938em;
     line-height: 1.5;
     margin-left: 150px;
@@ -185,8 +226,10 @@ header span,
     font-size: 1rem;
     text-align: justify;
     overflow: hidden;
+    width: 40%;
 }
-.home-text a{
+
+.home-text a {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -208,21 +251,26 @@ header span,
     margin-left: 150px;
     margin-top: 30px;
 }
-.home-text i{
+
+.home-text i {
     margin-right: 10px;
 }
-.home-text a:hover{
+
+.home-text a:hover {
     background-color: rgb(178, 0, 0);
 }
-.head{
+
+.head {
     display: flex;
 }
-.btn{
+
+.btn {
     display: flex;
     color: #fff;
     padding-right: 42px;
 }
-.btn div{
+
+.btn div {
     background: rgba(255, 0, 0, 0.08);
     margin-right: 10px;
     width: 100px;
@@ -231,20 +279,25 @@ header span,
     padding-top: 8px;
     border-radius: 5px;
 }
-.btn a{
+
+.btn a {
     text-decoration: none;
     color: #fff;
 }
-.btn div.home-nav{
+
+.btn div.home-nav {
     background: rgb(255, 0, 0);
 }
-.btn div:active{
+
+.btn div:active {
     background-color: rgba(255, 0, 0, 0.08);
 }
-.btn div a:hover{
+
+.btn div a:hover {
     background-color: rgba(255, 0, 0, 0.08);
 }
-.heading{
+
+.heading {
     max-width: 968px;
     margin-left: auto;
     margin-right: auto;
@@ -254,6 +307,7 @@ header span,
     margin-left: 50px;
     color: #fff;
 }
+
 .movies-container {
     display: grid;
     gap: 0.5rem;
@@ -263,19 +317,23 @@ header span,
     margin-top: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(340px, auto));
 }
+
 .movies-container .container-img {
     width: 100%;
     height: max-content;
 }
+
 .movies-container .container-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .movies-container .container {
     width: 100%;
     display: none;
 }
+
 .movies-container .container:nth-child(1),
 .movies-container .container:nth-child(2),
 .movies-container .container:nth-child(3),
@@ -283,15 +341,17 @@ header span,
 .movies-container .container:nth-child(5),
 .movies-container .container:nth-child(6),
 .movies-container .container:nth-child(7),
-.movies-container .container:nth-child(8){
+.movies-container .container:nth-child(8) {
     display: inline-block;
 }
+
 .container span,
-.container h5{
+.container h5 {
     color: #fff;
     padding-top: 5px;
 }
-.container h5{
+
+.container h5 {
     font-size: 18px;
 }
 
@@ -336,22 +396,25 @@ header span,
     height: 100%;
 }
 
-.footer{
+.footer {
     background-color: rgb(19, 19, 19);
     display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 50px;
 }
-.social{
+
+.social {
     margin-left: 78%;
     margin-top: 10px;
 }
-.social i{
+
+.social i {
     padding-left: 10px;
     color: #fff;
 }
-#load-more{
+
+#load-more {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -369,6 +432,232 @@ header span,
     color: rgb(255, 0, 0);
     width: 100%;
 }
-#load-more:hover{
+
+#load-more:hover {
     background-color: rgba(255, 0, 0, 0.08);
+}
+
+@media only screen and (max-width:1024px) {
+    .nav {
+        margin-right: 180px;
+    }
+
+    .btn_signin {
+        margin-left: 10%;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .social {
+        margin-left: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        margin-right: 80px;
+    }
+
+    #menu-icon {
+        display: initial;
+        margin-left: 2%;
+    }
+
+    .navbar i {
+        display: initial;
+    }
+
+    .navbar h1 {
+        display: initial;
+    }
+
+    .navbar {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -40px;
+        background: #363636;
+        flex-direction: column;
+        padding-top: 70px;
+        padding-left: 55px;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+    }
+
+    .navname {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .navbar li {
+        width: 140px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .navbar a {
+        display: flex;
+    }
+
+    .navbar.active {
+        opacity: 1;
+        left: -40px;
+        pointer-events: fill;
+    }
+
+    header h1 {
+        margin-right: 40%;
+        font-size: 26px;
+    }
+
+    .head {
+        display: initial;
+    }
+
+    .head h5 {
+        text-align: center;
+    }
+
+    .btn {
+        margin-left: 40%;
+        margin-top: 20px;
+    }
+
+    .btn div {
+        height: 35px;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .movies-slide {
+        max-height: 600px;
+    }
+
+    .text {
+        margin-top: -150px;
+    }
+
+    .footer {
+        display: block;
+        background: rgb(19, 19, 19);
+    }
+
+    .footer h1 {
+        text-align: center;
+    }
+
+    .social {
+        margin-left: 35%;
+        margin-top: 30px;
+    }
+
+    .social i {
+        margin-left: 20px;
+    }
+
+    .home-text h4 {
+        margin-left: 50px;
+        font-size: 40px;
+    }
+
+    .move {
+        margin-left: 50px;
+    }
+
+    .home-text p {
+        margin-left: 50px;
+        width: fit-content;
+    }
+
+    .home-text a {
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    header>.btn_signin {
+        margin-left: 10%;
+    }
+
+    #menu-icon {
+        margin-left: 3%;
+    }
+
+    .home-text h4 {
+        font-size: 32px;
+        margin-left: 20px;
+        margin-top: 120px;
+    }
+
+    .move {
+        margin-left: 20px;
+    }
+
+    .home-text p {
+        font-size: 14px;
+        margin-left: 20px;
+        width: fit-content;
+    }
+
+    .home-text a {
+        margin-left: 20px
+    }
+
+    .head h5 {
+        text-align: center;
+        margin-right: 50px;
+    }
+
+    .btn {
+        width: 500px;
+        margin-left: 90px;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .overlay i {
+        margin-top: 100px;
+    }
+
+    .text {
+        margin-top: -250px;
+    }
+
+    .footer {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .footer h1 {
+        text-align: center;
+    }
+
+    .social {
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+
+    .movies-slide {
+        max-height: 520px;
+    }
+
+    header>.btn_signin {
+        margin-left: -40%;
+        margin-right: 38%;
+    }
 }
